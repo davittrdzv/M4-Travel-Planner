@@ -4,7 +4,7 @@
 const destinos = [];
 
 // Función para registrar un destino de viaje
-export function registrarDestino(destino, fecha, transporte) {
+export const registrarDestino = (destino, fecha, transporte) => {
     // TODO: Crear un objeto con los datos del destino
     const nuevoViaje = {
         destino: destino,
@@ -12,12 +12,11 @@ export function registrarDestino(destino, fecha, transporte) {
         transporte: transporte,
         costo: calcularCosto(destino, transporte)
     };
-
     destinos.push(nuevoViaje);
-}
+};
 
 // Función para calcular el costo del viaje
-function calcularCosto(destino, transporte) {
+const calcularCosto = (destino, transporte) => {
     let costoBase = 0;
 
     // Costo base por destino
@@ -40,7 +39,7 @@ function calcularCosto(destino, transporte) {
 }
 
 // Función para mostrar el itinerario de los viajes registrados
-export function mostrarItinerario() {
+export const mostrarItinerario = () => {
     // TODO: Recorrer el arreglo de destinos y mostrar la información de cada uno
     for (let i = 0; i < destinos.length; i++) {
         const viaje = destinos[i];
