@@ -17,9 +17,9 @@ export const registrarDestino = (destino, fecha, transporte, viajeros) => {
 };
 
 // Función para calcular el costo del viaje
-const calcularCosto = (destino, transporte, viajeros) => {
+const calcularCosto = (destino, transporte, viajeros, descuento) => {
     let costoBase = 0;
-
+    
     // Costo base por destino
     if (destino === "París") {
         costoBase += 150;
@@ -52,7 +52,16 @@ const calcularCosto = (destino, transporte, viajeros) => {
         costoBase += 60;
     }
 
-    costoBase *= viajeros
+    descuento = 0;
+    if (viajeros > 1) {
+        descuento = viajeros * .025;
+    }
+
+    if (descuento > 0.25) {
+        descuento = 0.25;
+    }
+
+    costoBase = costoBase * viajeros * (1 - descuento)
 
     return costoBase;
 }
