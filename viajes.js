@@ -20,12 +20,26 @@ const calcularCosto = (destino, transporte) => {
     let costoBase = 0;
 
     // Costo base por destino
-    if (destino === "Paris") {
-        costoBase += 500;
+    if (destino === "París") {
+        costoBase += 150;
     } else if (destino === "Londres") {
-        costoBase += 400;
-    } else if (destino === "New York") {
-        costoBase += 600;
+        costoBase += 180;
+    } else if (destino === "Viena") {
+        costoBase += 110;
+    } else if (destino === "Madrid") {
+        costoBase += 120;
+    } else if (destino === "Barcelona") {
+        costoBase += 130;
+    } else if (destino === "Roma") {
+        costoBase += 140;
+    } else if (destino === "Ámsterdam") {
+        costoBase += 100;
+    } else if (destino === "Lisboa") {
+        costoBase += 110;
+    } else if (destino === "Bratislava") {
+        costoBase += 90;
+    } else if (destino === "Praga") {
+        costoBase += 80;
     }
 
     // Costo adicional por tipo de transporte
@@ -33,10 +47,13 @@ const calcularCosto = (destino, transporte) => {
         costoBase += 200;
     } else if (transporte === "Tren") {
         costoBase += 100;
+    } else if (transporte === "Autobús") {
+        costoBase += 60;
     }
 
     return costoBase;
 }
+
 
 // Función para mostrar el itinerario de los viajes registrados
 export const mostrarItinerario = () => {
