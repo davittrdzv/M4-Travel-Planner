@@ -1,0 +1,18 @@
+.contenedor  {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor span {
+    width: 50%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

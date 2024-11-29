@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Planificador de Viajes</h1>
+        <h2>¡Ingresa los datos de tu viaje!</h2>
+        <form name="planificador-de-viaje" id="create-to-do-form">
+            <label for="destinos">Destino</label>
+            <select name="destinos" id="destinos">
+                <option disabled selected value> -- Seleccionar -- </option>
+                <option value="París" id="destino-paris">París</option>
+                <option value="Londres" id="destino-londres">Londres</option>
+                <option value="Viena" id="destino-viena">Viena</option>
+                <option value="Madrid" id="destino-madrid">Madrid</option>
+                <option value="Barcelona" id="destino-barcelona">Barcelona</option>
+                <option value="Roma" id="destino-roma">Roma</option>
+                <option value="Ámsterdam" id="destino-amsterdam">Ámsterdam</option>
+                <option value="Lisboa" id="destino-lisboa">Lisboa</option>
+                <option value="Bratislava" id="destino-bratislava">Bratislava</option>
+                <option value="Praga" id="destino-praga">Praga</option>
+            </select>
+            <label for="fecha-inicio">Fecha de inicio</label>
+            <input type="date" name="fecha-inicio" id="fecha-inicio" placeholder="yyyy-mm-dd">
+            <label for="fecha-fin">Fecha de fin</label>
+            <input type="date" name="fecha-fin" id="fecha-fin" placeholder="yyyy-mm-dd">
+            <label for="transporte">Medio de transporte</label>
+            <select name="transporte" id="transporte">
+                <option disabled selected value> -- Seleccionar -- </option>
+                <option value="Avión" id="transporte-avion">Avión</option>
+                <option value="Tren" id="transporte-tren">Tren</option>
+                <option value="Autobús" id="transporte-bus">Autobús</option>
+            </select>
+            <label for="viajeros">Viajeros</label>
+            <select name="viajeros" id="viajeros">
+                <option disabled selected value> -- Seleccionar -- </option>
+                <option value="1" id="viajeros-1">1</option>
+                <option value="2" id="viajeros-2">2</option>
+                <option value="3" id="viajeros-3">3</option>
+                <option value="4" id="viajeros-4">4</option>
+                <option value="5" id="viajeros-5">5</option>
+                <option value="6" id="viajeros-6">6</option>
+                <option value="7" id="viajeros-7">7</option>
+                <option value="8" id="viajeros-8">8</option>
+                <option value="9" id="viajeros-9">9</option>
+                <option value="10" id="viajeros-10">10</option>
+                <option value="11" id="viajeros-11">11</option>
+                <option value="12" id="viajeros-12">12</option>
+            </select>
+            <button id="add-button">Agregar +</button>
+        </form>
+        <h1>Tu Itinerario de Viajes</h1>
+        <div id="contenedor-principal">
+            <div>
+                <div class="contenedor">
+                    <span>Destino</span>
+                    <span>Fecha de inicio</span>
+                    <span>Fecha de fin</span>
+                    <span>Noches totales</span>
+                    <span>Medio de transporte</span>
+                    <span>Número de viajeros</span>
+                    <span>Costo total</span>
+                </div>
+            </div>
+            <div id="contenedor-viajes">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
